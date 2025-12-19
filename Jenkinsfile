@@ -1,12 +1,6 @@
 pipeline {
     agent any   // or: agent { label 'docker' }
 
-    tools {
-        // Names must match what you configured in "Global Tool Configuration"
-        maven 'Maven-3'     // e.g. Maven installation named "Maven-3"
-        jdk   'JDK21'       // e.g. JDK installation named "JDK17"
-    }
-
     stages {
         stage('Checkout') {
             steps {
